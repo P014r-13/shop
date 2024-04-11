@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white">
+                <a href="#" class="text-xl font-bold">Shop</a>
+            </div>
+            <div>
+                <a href="#" class="text-white mx-2">Home</a>
+                <a href="#" class="text-white mx-2">Products</a>
+                <a href="#" class="text-white mx-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-200 py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4">Welcome to Our Shop</h1>
+            <p class="text-xl">Find the best products at the best prices.</p>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+<!-- Best Selling Products Section -->
+<section class="py-20">
+
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Best Selling Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Best Selling Product Card -->
+                {% for product in products %}
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <img src="{{ product.image.url }}" alt="Best Selling Product Image" class="w-full h-64 object-cover">
+                <h3 class="text-xl font-bold mt-4">{{ product.name }}</h3>
+                <p class="text-gray-600">{{ product.disc }}</p>
+                <div class="mt-4">
+                    <span class="text-lg font-bold">$49.99</span>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Add to Cart</button>
+                </div>
+            </div>
+                {% endfor %}
+            <!-- Repeat Best Selling Product Card for other products -->
+        </div>
+    </div>
+
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
