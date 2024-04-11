@@ -1,4 +1,3 @@
-from django.utils import timezone
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, Group, Permission
 from .manager import CustomUserManager
@@ -25,5 +24,6 @@ help_text='The groups this user belongs to. A user will get all permissions gran
 user_permissions = models.ManyToManyField(Permission, verbose_name='user permissions', blank=True,
 related_name="custom_user_permissions",
 help_text='Specific permissions for this user.')
+
 
 
