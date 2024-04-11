@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Homepage</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="bg-gray-800 p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-white">
-                <a href="#" class="text-xl font-bold">Shop</a>
-            </div>
-            <div>
-                <a href="#" class="text-white mx-2">Home</a>
-                <a href="#" class="text-white mx-2">Products</a>
-                <a href="#" class="text-white mx-2">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
+{% extends 'base.html' %}
+{% block content %}
+    {% include 'navbar.html' %}
     <section class="bg-gray-200 py-20">
         <div class="container mx-auto text-center">
             <h1 class="text-4xl font-bold mb-4">Welcome to Our Shop</h1>
@@ -53,13 +32,5 @@
     </div>
 
 </section>
-
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white p-4">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Shop. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+{% include 'footer.html' %}
+{% endblock %}
