@@ -1,34 +1,752 @@
-{% extends 'base.html' %}
-{% block content %}
-    {% include 'navbar.html' %}
-    <section class="bg-gray-200 py-20">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold mb-4">Welcome to Our Shop</h1>
-            <p class="text-xl">Find the best products at the best prices.</p>
-        </div>
-    </section>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 
-<section class="py-20">
+{% load static %}
+<!-- Mirrored from template.hasthemes.com/sinp/sinp/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Apr 2024 09:29:12 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Sinp- Single Product Ecommerce HTML Template</title>
+    <!-- <meta name="robots" content="noindex, follow" /> -->
+    <meta name="AdsBot-Google" content="noindex follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">Best Selling Products</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <!-- Best Selling Product Card -->
-                {% for product in products %}
-            <div class="bg-white rounded-lg shadow-lg p-4">
-                <img src="{{ product.image.url }}" alt="Best Selling Product Image" class="w-full h-64 object-cover">
-                <h3 class="text-xl font-bold mt-4">{{ product.name }}</h3>
-                <p class="text-gray-600">{{ product.disc }}</p>
-                <div class="mt-4">
-                    <span class="text-lg font-bold">${{ product.price }}</span>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Add to Cart</button>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon.webp' %}" />
+
+    <!-- CSS (Font, Vendor, Icon, Plugins & Style CSS files) -->
+
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/icofont.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/line-awesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/simple-line-icons.css' %}" />
+    <!-- Font CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/index.html" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/index.html" crossorigin />
+    <link href="https://fonts.googleapis.com/css22d87.css?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet" />
+
+    <!-- Vendor CSS (Bootstrap & Icon Font) -->
+
+    <!-- Plugins CSS (All Plugins Files) -->
+
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper-bundle.min.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/magnific-popup.css' %}" />
+
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+      <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+
+<body class="font-poppins text-dark text-sm leading-loose">
+    <!-- Header start -->
+
+    <header id="sticky-header" class="fixed inset-x-0 top-0 w-full z-20">
+        <div class="px-4 md:px-10 2xl:px-24 py-6 lg:py-0">
+            <div class="flex items-center lg:relative">
+                <div class="w-6/12 lg:w-2/12">
+                    <div class="logo"><a href="index.html"><img src="{% static 'assets/images/logo/logo.webp' %}" alt="logo" loading="lazy" width="125" height="45" /></a></div>
+                </div>
+                <div class="hidden lg:flex flex-1 xl:relative">
+                    <nav class="main-menu">
+                        <ul class="flex flex-wrap">
+                            <li class="main-menu__item relative group">
+                                <a class="block py-10 xl:pr-6 md:pr-5 capitalize font-normal text-md text-primary hover:text-orange transition-all" href="https://template.hasthemes.com/">Home</a>
+                                <ul class="submenu bg-white py-3 px-8 shadow transition-all absolute left-0 top-full opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:-translate-y-3 transform z-10 min-w-max">
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="index.html">Airpod</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="index-2.html">Smartwatch</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="index-3.html">Drone</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="index-4.html">BackPack</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="main-menu__item group">
+                                <a class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all" href="#">Shop</a>
+                                <ul class="mega-menu flex flex-wrap bg-white py-5 px-8 shadow transition-all absolute left-0 top-full opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:-translate-y-3 transform z-10">
+                                    <li class="flex-auto px-4">
+                                        <a class="font-normal text-base capitalize text-dark pb-5 border-b block border-solid border-gray-600 mb-6 tracking-wide transition-all hover:text-orange" href="#">Shop Grid </a>
+                                        <ul class="pb-2">
+                                            <li class="my-3"><a class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all" href="shop-grid-3-column.html">Shop Grid 3 Column</a></li>
+                                            <li class="my-3"><a class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all" href="shop-grid-4-column.html">Shop Grid 4 Column</a></li>
+                                            <li class="my-3"><a class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all" href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a></li>
+                                            <li class="my-3"><a class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all" href="shop-grid-right-sidebar.html">shop Grid Right Sidebar</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="flex-auto px-4">
+                                        <a class="font-normal text-base capitalize text-dark pb-5 border-b block border-solid border-gray-600 mb-6 tracking-wide transition-all hover:text-orange" href="shop-list.html">shop list</a>
+                                        <ul class="pb-2">
+                                            <li class="my-3"><a class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all" href="shop-list.html">Shop List</a></li>
+                                            <li class="my-3"><a class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all" href="shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
+                                            <li class="my-3"><a class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all" href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="flex-auto px-4">
+                                        <a class="font-normal text-base capitalize text-dark pb-5 border-b block border-solid border-gray-600 mb-6 tracking-wide transition-all hover:text-orange" href="#">Product Types</a>
+                                        <ul class="pb-2">
+                                            <li class="my-3"><a class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all" href="single-product.html">Shop Single</a></li>
+                                            <li class="my-3"><a class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all" href="single-product-configurable.html">Shop Variable</a></li>
+                                            <li class="my-3"><a class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all" href="single-product-affiliate.html">Shop Affiliate</a></li>
+                                            <li class="my-3"><a class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all" href="single-product-group.html">Shop Group</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="overflow-hidden flex-auto mx-4"><a href="#"><img class="transform hover:scale-105 transition-all w-full" src="{% static 'assets/images/mega-menu/megamenu.webp' %}" alt="Smartwatch" loading="lazy" width="1000" height="120" /></a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu__item relative group"><a class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all" href="#">Blog</a>
+
+                                <ul class="submenu bg-white py-3 px-8 shadow transition-all absolute left-0 top-full opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:-translate-y-3 transform z-10 min-w-max">
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="blog-grid-3-column.html">Blog Grid 3 Column</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="blog-grid-2-column.html">Blog Grid 2 Column</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="blog-list.html">Blog list</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="blog-list-right-sidebar.html"> Blog List Right Sideba</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="blog-details.html"> Blog details</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="main-menu__item relative group"><a class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all" href="#">pages</a>
+                                <ul class="submenu bg-white py-3 px-8 shadow transition-all absolute left-0 top-full opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:-translate-y-3 transform z-10 min-w-max">
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="about-us.html">About Page</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="cart.html">Cart Page</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="checkout.html">Checkout Page</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="compare.html">Compare Page</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="login-register.html">Login & Register Page</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="account.html">Account Page</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="whishlist.html">Wishlist Page</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="faq.html">Frequently Questions</a></li>
+                                    <li class="my-3"><a class="text-dark font-normal text-base capitalize transition-all hover:text-orange" href="404.html">Error 404</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu__item"><a class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all" href="contact-us.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <div class="w-6/12 lg:w-3/12">
+                    <ul class="flex items-center justify-end">
+                        <li class="ml-6 hidden lg:block">
+                            <button class="search-toggle text-right text-primary text-md hover:text-orange transition-all" aria-label="icon-settings">
+                                <i class="icon-magnifier"></i>
+                            </button>
+                        </li>
+                        <li class="ml-6">
+                            <a href="#offcanvas-cart" class="text-primary text-md hover:text-orange transition-all relative offcanvas-toggle">
+                                <span class="w-5 h-5 bg-dark text-white text-sm rounded-full font-normal flex flex-wrap items-center justify-center absolute -top-3 left-2 leading-none">4</span>
+                                <i class="icon-bag"></i>
+                                <span class="text-base leading-none text-dark">$245</span>
+                            </a>
+
+                        </li>
+                        <li id="toggle-menu" class="ml-6 hidden lg:block relative">
+                            <button class="text-primary text-md hover:text-orange transition-all toggle-menu" aria-label="icon-settings">
+                                <i class="icon-settings"></i>
+                            </button>
+                            <div id="settings-card" class="bg-white absolute right-0 px-8 py-5 shadow w-80 opacity-0 invisible transition-all duration-300 ease-in-out z-20">
+                                <h4 class="text-md text-dark font-normal capitalize tracking-wide pb-5 border-b border-solid border-gray-600 mb-5">Currency</h4>
+                                <ul>
+                                    <li class="my-4"><a href="#" class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">USD - US Dollar</a></li>
+                                    <li class="my-4"><a href="#" class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">EUR - Euro</a></li>
+                                    <li class="my-4"><a href="#" class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">GBP - British Pound</a></li>
+                                </ul>
+                                <h4 class="text-md text-dark font-normal capitalize tracking-wide pb-5 border-b border-solid border-gray-600 mb-5">Account</h4>
+                                <ul>
+                                    <li class="my-4"><a href="login-register.html" class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">Login</a></li>
+                                    <li class="mt-4"><a href="account.html" class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">Create Account</a></li>
+                                </ul>
+                            </div>
+
+
+                        </li>
+                        <li class="ml-6 lg:hidden">
+                            <a href="#offcanvas-mobile-menu" class="offcanvas-toggle text-primary text-md hover:text-orange transition-all"><i class="icon-menu"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-                {% endfor %}
-            <!-- Repeat Best Selling Product Card for other products -->
+        </div>
+
+    </header>
+
+    <div class="search-form fixed top-0 left-0 w-full bg-black opacity-95 min-h-screen items-center justify-center py-8 px-10 transform  transition-transform translate-x-full ease-in-out duration-500 hidden lg:flex z-50">
+        <button class="search-close absolute left-1/2 text-white text-xl top-12 translate-y-1/2" aria-label="close icon"><span class="icon-close"></span></button>
+        <form class="relative xl:w-1/3 lg:w-1/2" action="#" method="get">
+            <input class="text-md font-normal border-b border-solid border-gray-600 bg-transparent h-14 w-full focus:outline-none pr-14 text-white" type="search" name="search" placeholder="Search our store" />
+            <button class="absolute right-0 top-3 text-white text-md font-normal" type="submit" aria-label="submit button"><i class="icon-magnifier"></i></button>
+        </form>
+    </div>
+    <!-- offcanvas-overlay start -->
+    <div class="offcanvas-overlay hidden fixed inset-0 bg-black opacity-50 z-50"></div>
+    <!-- offcanvas-overlay end -->
+    <!-- offcanvas-mobile-menu start -->
+    <div id="offcanvas-mobile-menu" class="offcanvas left-auto right-0  transform translate-x-translate-x-full-120 fixed font-normal text-sm top-0 z-50 h-screen w-72 sm:w-80 lg:w-96 transition-all ease-in-out duration-300 bg-white">
+
+        <div class="px-8 py-12 h-5/6 overflow-y-auto">
+
+            <!-- search form start -->
+
+            <form class="pb-10 mb-10 border-b border-solid border-gray-600" action="#" method="get">
+                <div class="relative">
+                    <input class="w-full h-12 text-sm py-4 pl-4 pr-16 bg-gray-light text-dark placeholder-current focus:outline-none" type="search" name="search" placeholder="Search our store">
+                    <button class="w-12 h-full absolute top-0 right-0 flex items-center justify-center text-dark text-md border-l border-solid border-gray-600" type="submit" aria-label="button"><i class="icon-magnifier"></i></button>
+                </div>
+            </form>
+
+            <!-- search form end -->
+
+            <!-- close button start -->
+            <button class="offcanvas-close bg-dark group transition-all hover:text-orange text-white w-10 h-10 flex items-center justify-center absolute -left-10 top-0" aria-label="offcanvas"><i class="icon-close transition-all transform group-hover:rotate-90"></i></button>
+            <!-- close button end -->
+
+            <!-- offcanvas-menu start -->
+
+
+            <nav class="offcanvas-menu pb-10 mb-10 border-b border-solid border-gray-600">
+                <ul>
+                    <li class="relative block">
+                        <a href="#" class="block capitalize font-normal text-base my-2 py-1 font-roboto">Home</a>
+                        <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
+                            <li><a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="index.html">Airpod</a></li>
+                            <li><a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="index-2.html">Smartwatch</a></li>
+                            <li><a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="index-3.html">Drone</a></li>
+                            <li><a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="index-4.html">BackPack</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative block">
+                        <a href="#" class="block capitalize font-normal text-base my-2 py-1 font-roboto">Shop</a>
+                        <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="#">Shop Grid</a>
+                                <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
+                                    <li>
+                                        <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="shop-grid-3-column.html">Shop Grid 3 Column</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="shop-grid-4-column.html">Shop Grid 4 Column</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="shop-grid-right-sidebar.html">Shop Grid Right Sidebar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="shop-list.html">Shop list</a>
+                                <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
+                                    <li>
+                                        <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="shop-list.html">Shop List</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="shop-list-left-sidebar.html">Shop List Left Sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="shop-list-right-sidebar.html">Shop List Right Sidebar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="#">Product Types</a>
+                                <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
+                                    <li>
+                                        <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="single-product.html">Shop Single</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="single-product-configurable.html">Shop Variable</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="single-product-affiliate.html">Shop Affiliate</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="single-product-group.html">Shop Group</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="relative block">
+                        <a href="#" class="block capitalize font-normal text-base my-2 py-1 font-roboto">Blog</a>
+                        <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="blog-grid-3-column.html">Blog Grid 3 Column</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="blog-grid-2-column.html">Blog Grid 2 Column</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="blog-list.html">Blog list</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="blog-list-left-sidebar.html">Blog List Left Sidebar</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="blog-list-right-sidebar.html"> Blog List Right Sidebar</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="blog-details.html"> Blog details</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="relative block">
+                        <a href="#" class="block capitalize font-normal text-base my-2 py-1 font-roboto">pages</a>
+                        <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="about-us.html">About Page</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="cart.html">Cart Page</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="checkout.html">Checkout Page</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="compare.html">Compare Page</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="login-register.html">Login & Register Page</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="account.html">Account Page</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="whishlist.html">Wishlist Page</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="faq.html">Frequently Questions</a>
+                            </li>
+                            <li>
+                                <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange" href="404.html">Error 404</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact-us.html" class="block capitalize font-normal text-base my-2 py-1 font-roboto">contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- offcanvas-menu end -->
+
+        </div>
+
+        <div class="absolute bottom-0 px-8 py-5 border-t border-solid border-gray-600 w-full">
+
+            <!-- language start -->
+            <div class="language w-full">
+                <h4 class="text-dark capitalize font-normal pb-5 border-b border-solid border-gray-600 mb-5">language</h4>
+                <ul>
+                    <li class="my-3"><a href="#" class="text-sm text-dark hover:text-orange transition-all font-light capitalize tracking-wide">English</a></li>
+                    <li class="my-3"><a href="#" class="text-sm text-dark hover:text-orange transition-all font-light capitalize tracking-wide">Español</a></li>
+                    <li class="my-3"><a href="#" class="text-sm text-dark hover:text-orange transition-all font-light capitalize tracking-wide">日本語</a></li>
+                </ul>
+            </div>
+            <!-- language end -->
+
+            <!-- currency start -->
+            <div class="currency w-full">
+                <h4 class="text-dark capitalize font-normal pb-5 border-b border-solid border-gray-600 mb-5">currency</h4>
+                <ul>
+                    <li class="my-3"><a href="#" class="text-sm text-dark hover:text-orange transition-all font-light capitalize tracking-wide">usd - us dollar</a></li>
+                    <li class="my-3"><a href="#" class="text-sm text-dark hover:text-orange transition-all font-light capitalize tracking-wide">eur - euro</a></li>
+                    <li class="my-3"><a href="#" class="text-sm text-dark hover:text-orange transition-all font-light capitalize tracking-wide">gbp - british pound</a></li>
+                </ul>
+            </div>
+            <!-- currency end -->
+
+            <!-- account start -->
+            <div class="account w-full">
+                <h4 class="text-dark capitalize font-normal pb-5 border-b border-solid border-gray-600 mb-5">account</h4>
+                <ul>
+                    <li class="my-3"><a href="login-register.html" class="text-sm text-dark hover:text-orange transition-all font-light capitalize tracking-wide">login</a></li>
+                    <li class="mt-3"><a href="account.html" class="text-sm text-dark hover:text-orange transition-all font-light capitalize tracking-wide">create account</a></li>
+                </ul>
+            </div>
+            <!-- account end -->
+
+        </div>
+
+    </div>
+    <!-- offcanvas-mobile-menu end -->
+    <!-- search overlay start -->
+    <div id="search-overlay" class="search-overlay fixed top-0 left-0 w-full bg-black opacity-95 min-h-screen z-50 overflow-auto hidden">
+        <button class="search-close absolute left-1/2 text-white text-xl top-12 transform -translate-x-1/2" aria-label="close icon"><span class="icon-close"></span></button>
+        <div class="search-overlay__content flex items-center justify-center min-h-screen py-8 px-10 text-center">
+            <form class="relative w-full max-w-md" action="#" method="get">
+                <input class="w-full h-14 text-md font-normal border-b border-solid border-gray-600 bg-transparent focus:outline-none pr-14 text-white" type="search" name="search" placeholder="Search our store" />
+                <button class="absolute right-0 top-3 text-white text-md font-normal" type="submit" aria-label="submit button"><i class="icon-magnifier"></i></button>
+            </form>
         </div>
     </div>
+    <!-- search overlay end -->
+    <!-- offcanvas-cart start -->
+    <div id="offcanvas-cart" class="offcanvas fixed top-0 right-0 h-full bg-white w-full sm:w-96 md:w-100 lg:w-96 xl:w-120  transform translate-x-full transition-all ease-in-out duration-300 z-50 overflow-y-auto">
+        <button class="offcanvas-close bg-dark group transition-all hover:text-orange text-white w-10 h-10 flex items-center justify-center absolute -right-10 top-0" aria-label="offcanvas"><i class="icon-close transition-all transform group-hover:rotate-90"></i></button>
+        <div class="px-8 py-12 h-full overflow-y-auto">
 
-</section>
-{% include 'footer.html' %}
-{% endblock %}
+            <h4 class="text-md text-dark capitalize font-normal mb-8">Shopping Cart</h4>
+
+            <div class="single-cart relative border-b border-solid border-gray-300 pb-6 mb-6">
+                <button class="absolute right-0 top-0 bg-transparent text-black opacity-50 hover:opacity-100 text-lg font-semibold leading-none px-3 py-1 transition-all duration-300" aria-label="close button">×</button>
+                <div class="cart-img relative w-24 h-24 flex-shrink-0">
+                    <a href="single-product.html">
+                        <img src="{% static 'assets/images/cart/cart1.webp' %}" alt="Cart Image" class="w-full h-full object-cover" />
+                    </a>
+                </div>
+                <div class="cart-content pl-6">
+                    <h5 class="product-name mb-2 font-normal"><a href="single-product.html">Product Name</a></h5>
+                    <div class="product-quantity flex items-center justify-between mb-2">
+                        <p class="quantity">Qty: 02</p>
+                        <p class="amount text-orange font-semibold">$200.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-cart relative border-b border-solid border-gray-300 pb-6 mb-6">
+                <button class="absolute right-0 top-0 bg-transparent text-black opacity-50 hover:opacity-100 text-lg font-semibold leading-none px-3 py-1 transition-all duration-300" aria-label="close button">×</button>
+                <div class="cart-img relative w-24 h-24 flex-shrink-0">
+                    <a href="single-product.html">
+                        <img src="{% static 'assets/images/cart/cart2.webp' %}" alt="Cart Image" class="w-full h-full object-cover" />
+                    </a>
+                </div>
+                <div class="cart-content pl-6">
+                    <h5 class="product-name mb-2 font-normal"><a href="single-product.html">Product Name</a></h5>
+                    <div class="product-quantity flex items-center justify-between mb-2">
+                        <p class="quantity">Qty: 01</p>
+                        <p class="amount text-orange font-semibold">$120.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-cart relative border-b border-solid border-gray-300 pb-6 mb-6">
+                <button class="absolute right-0 top-0 bg-transparent text-black opacity-50 hover:opacity-100 text-lg font-semibold leading-none px-3 py-1 transition-all duration-300" aria-label="close button">×</button>
+                <div class="cart-img relative w-24 h-24 flex-shrink-0">
+                    <a href="single-product.html">
+                        <img src="{% static 'assets/images/cart/cart3.webp' %}" alt="Cart Image" class="w-full h-full object-cover" />
+                    </a>
+                </div>
+                <div class="cart-content pl-6">
+                    <h5 class="product-name mb-2 font-normal"><a href="single-product.html">Product Name</a></h5>
+                    <div class="product-quantity flex items-center justify-between mb-2">
+                        <p class="quantity">Qty: 02</p>
+                        <p class="amount text-orange font-semibold">$150.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subtotal border-b border-solid border-gray-300 pb-6 mb-6">
+                <h6 class="text-md text-dark capitalize font-normal mb-4">Subtotal: <span class="amount text-orange font-semibold">$470.00</span></h6>
+                <h6 class="text-md text-dark capitalize font-normal mb-4">Shipping: <span class="amount text-orange font-semibold">Free</span></h6>
+                <h6 class="text-md text-dark capitalize font-normal mb-6">Taxes: <span class="amount text-orange font-semibold">$00.00</span></h6>
+                <h5 class="text-md text-dark capitalize font-normal mb-8">Total: <span class="amount text-orange font-semibold">$470.00</span></h5>
+                <a href="cart.html" class="btn btn-dark w-full">view cart</a>
+                <a href="checkout.html" class="btn btn-orange w-full mt-3">checkout</a>
+            </div>
+
+            <div class="cart__close-btn w-full text-center mt-10">
+                <button class="btn btn-black w-full" aria-label="close button">close cart</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- offcanvas-cart end -->
+
+    <!-- top-bar start -->
+    <div class="top-bar bg-dark py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <ul class="social">
+                        <li><a href="#" class="text-white hover:text-orange transition-all"><i class="icon-social-facebook"></i></a></li>
+                        <li><a href="#" class="text-white hover:text-orange transition-all"><i class="icon-social-twitter"></i></a></li>
+                        <li><a href="#" class="text-white hover:text-orange transition-all"><i class="icon-social-instagram"></i></a></li>
+                        <li><a href="#" class="text-white hover:text-orange transition-all"><i class="icon-social-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-8">
+                    <ul class="links text-white text-sm uppercase tracking-wider">
+                        <li class="mr-8"><a href="track-order.html" class="hover:text-orange transition-all">Track Order</a></li>
+                        <li class="mr-8"><a href="store-locator.html" class="hover:text-orange transition-all">Store Locator</a></li>
+                        <li class="mr-8"><a href="faq.html" class="hover:text-orange transition-all">FAQ</a></li>
+                        <li><a href="contact-us.html" class="hover:text-orange transition-all">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- top-bar end -->
+
+    <!-- header start -->
+    <header class="sticky top-0 bg-white z-30">
+        <div class="container">
+            <div class="row align-items-center justify-content-between py-4">
+                <div class="col-xl-3 col-lg-2 col-md-3 col-4">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img class="w-auto h-10" src="{% static 'assets/images/logo/logo-dark.png' %}" alt="header-logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 d-none d-md-block">
+                    <nav class="main-menu text-center">
+                        <ul>
+                            <li><a href="index.html">Home</a>
+                                <ul class="sub-menu">
+                                    <li><a href="index.html">Airpod</a></li>
+                                    <li><a href="index-2.html">Smartwatch</a></li>
+                                    <li><a href="index-3.html">Drone</a></li>
+                                    <li><a href="index-4.html">BackPack</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="shop-grid-3-column.html">Shop</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Shop Grid</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop-grid-3-column.html">Shop Grid 3 Column</a></li>
+                                            <li><a href="shop-grid-4-column.html">Shop Grid 4 Column</a></li>
+                                            <li><a href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a></li>
+                                            <li><a href="shop-grid-right-sidebar.html">Shop Grid Right Sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="shop-list.html">Shop list</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop-list.html">Shop List</a></li>
+                                            <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
+                                            <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Product Types</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="single-product.html">Shop Single</a></li>
+                                            <li><a href="single-product-configurable.html">Shop Variable</a></li>
+                                            <li><a href="single-product-affiliate.html">Shop Affiliate</a></li>
+                                            <li><a href="single-product-group.html">Shop Group</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Blog</a>
+                                <ul class="sub-menu">
+                                    <li><a href="blog-grid-3-column.html">Blog Grid 3 Column</a></li>
+                                    <li><a href="blog-grid-2-column.html">Blog Grid 2 Column</a></li>
+                                    <li><a href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
+                                    <li><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
+                                    <li><a href="blog-list.html">Blog list</a></li>
+                                    <li><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
+                                    <li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
+                                    <li><a href="blog-details.html"> Blog details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">pages</a>
+                                <ul class="sub-menu">
+                                    <li><a href="about-us.html">About Page</a></li>
+                                    <li><a href="cart.html">Cart Page</a></li>
+                                    <li><a href="checkout.html">Checkout Page</a></li>
+                                    <li><a href="compare.html">Compare Page</a></li>
+                                    <li><a href="login-register.html">Login & Register Page</a></li>
+                                    <li><a href="account.html">Account Page</a></li>
+                                    <li><a href="whishlist.html">Wishlist Page</a></li>
+                                    <li><a href="faq.html">Frequently Questions</a></li>
+                                    <li><a href="404.html">Error 404</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact-us.html">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-3 col-8">
+                    <div class="header-right text-right">
+                        <ul class="header-menu justify-content-end">
+                            <li class="header-search">
+                                <a href="#" id="search-overlay-toggler" class="text-dark"><i class="icon-magnifier"></i></a>
+                            </li>
+                            <li class="header-wishlist">
+                                <a href="whishlist.html" class="text-dark relative"><i class="icon-heart"></i><span class="badge">0</span></a>
+                            </li>
+                            <li class="header-mini-cart">
+                                <a href="#" class="text-dark relative"><i class="icon-bag"></i><span class="badge">02</span></a>
+                                <!-- Mini Cart -->
+                                <div class="mini-cart absolute top-full right-0 bg-white w-48 p-3 shadow-3xl z-20 transform translate-y-1/2 -translate-x-full">
+                                    <button class="btn btn-black absolute right-0 top-0 -mt-3 mr-3" aria-label="close button">X</button>
+                                    <h5 class="text-dark font-semibold text-md mb-6">Cart Items</h5>
+                                    <div class="single-cart relative border-b border-solid border-gray-300 pb-6 mb-6">
+                                        <button class="absolute right-0 top-0 bg-transparent text-black opacity-50 hover:opacity-100 text-lg font-semibold leading-none px-3 py-1 transition-all duration-300" aria-label="close button">×</button>
+                                        <div class="cart-img relative w-20 h-20 flex-shrink-0">
+                                            <a href="single-product.html">
+                                                <img src="{% static 'assets/images/cart/cart1.webp' %}" alt="Cart Image" class="w-full h-full object-cover" />
+                                            </a>
+                                        </div>
+                                        <div class="cart-content pl-6">
+                                            <h5 class="product-name mb-2 font-normal"><a href="single-product.html">Product Name</a></h5>
+                                            <div class="product-quantity flex items-center justify-between mb-2">
+                                                <p class="quantity">Qty: 02</p>
+                                                <p class="amount text-orange font-semibold">$200.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-cart relative border-b border-solid border-gray-300 pb-6 mb-6">
+                                        <button class="absolute right-0 top-0 bg-transparent text-black opacity-50 hover:opacity-100 text-lg font-semibold leading-none px-3 py-1 transition-all duration-300" aria-label="close button">×</button>
+                                        <div class="cart-img relative w-20 h-20 flex-shrink-0">
+                                            <a href="single-product.html">
+                                                <img src="{% static 'assets/images/cart/cart2.webp' %}" alt="Cart Image" class="w-full h-full object-cover" />
+                                            </a>
+                                        </div>
+                                        <div class="cart-content pl-6">
+                                            <h5 class="product-name mb-2 font-normal"><a href="single-product.html">Product Name</a></h5>
+                                            <div class="product-quantity flex items-center justify-between mb-2">
+                                                <p class="quantity">Qty: 01</p>
+                                                <p class="amount text-orange font-semibold">$120.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-cart relative">
+                                        <button class="absolute right-0 top-0 bg-transparent text-black opacity-50 hover:opacity-100 text-lg font-semibold leading-none px-3 py-1 transition-all duration-300" aria-label="close button">×</button>
+                                        <div class="cart-img relative w-20 h-20 flex-shrink-0">
+                                            <a href="single-product.html">
+                                                <img src="{% static 'assets/images/cart/cart3.webp' %}" alt="Cart Image" class="w-full h-full object-cover" />
+                                            </a>
+                                        </div>
+                                        <div class="cart-content pl-6">
+                                            <h5 class="product-name mb-2 font-normal"><a href="single-product.html">Product Name</a></h5>
+                                            <div class="product-quantity flex items-center justify-between mb-2">
+                                                <p class="quantity">Qty: 02</p>
+                                                <p class="amount text-orange font-semibold">$150.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="subtotal border-b border-solid border-gray-300 pb-6 mb-6">
+                                        <h6 class="text-md text-dark capitalize font-normal mb-4">Subtotal: <span class="amount text-orange font-semibold">$470.00</span></h6>
+                                        <h6 class="text-md text-dark capitalize font-normal mb-4">Shipping: <span class="amount text-orange font-semibold">Free</span></h6>
+                                        <h6 class="text-md text-dark capitalize font-normal mb-6">Taxes: <span class="amount text-orange font-semibold">$00.00</span></h6>
+                                        <h5 class="text-md text-dark capitalize font-normal mb-8">Total: <span class="amount text-orange font-semibold">$470.00</span></h5>
+                                        <a href="cart.html" class="btn btn-dark w-full">view cart</a>
+                                        <a href="checkout.html" class="btn btn-orange w-full mt-3">checkout</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header-settings">
+                                <a href="#" class="text-dark relative"><i class="icon-settings"></i></a>
+                                <div class="settings-dropdown absolute top-full right-0 w-48 bg-white border border-solid border-gray-300 shadow-3xl hidden z-10">
+                                    <ul>
+                                        <li class="py-3 px-6 text-dark hover:text-orange transition-all border-b border-solid border-gray-300"><a href="login-register.html">login</a></li>
+                                        <li class="py-3 px-6 text-dark hover:text-orange transition-all"><a href="account.html">create account</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 d-block d-md-none">
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- offcanvas-mobile-menu start -->
+    <div id="offcanvas-mobile-menu" class="offcanvas bg-dark py-8">
+        <div class="inner custom-scroll">
+
+            <!-- offcanvas menu start -->
+            <nav class="offcanvas-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">Airpod</a></li>
+                            <li><a href="index-2.html">Smartwatch</a></li>
+                            <li><a href="index-3.html">Drone</a></li>
+                            <li><a href="index-4.html">BackPack</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="shop-grid-3-column.html">Shop</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Shop Grid</a>
+                                <ul class="sub-menu">
+                                    <li><a href="shop-grid-3-column.html">Shop Grid 3 Column</a></li>
+                                    <li><a href="shop-grid-4-column.html">Shop Grid 4 Column</a></li>
+                                    <li><a href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a></li>
+                                    <li><a href="shop-grid-right-sidebar.html">Shop Grid Right Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="shop-list.html">Shop list</a>
+                                <ul class="sub-menu">
+                                    <li><a href="shop-list.html">Shop List</a></li>
+                                    <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
+                                    <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Product Types</a>
+                                <ul class="sub-menu">
+                                    <li><a href="single-product.html">Shop Single</a></li>
+                                    <li><a href="single-product-configurable.html">Shop Variable</a></li>
+                                    <li><a href="single-product-affiliate.html">Shop Affiliate</a></li>
+                                    <li><a href="single-product-group.html">Shop Group</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Blog</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog-grid-3-column.html">Blog Grid 3 Column</a></li>
+                            <li><a href="blog-grid-2-column.html">Blog Grid 2 Column</a></li>
+                            <li><a href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
+                            <li><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
+                            <li><a href="blog-list.html">Blog list</a></li>
+                            <li><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
+                            <li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
+                            <li><a href="blog-details.html"> Blog details</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">pages</a>
+                        <ul class="sub-menu">
+                            <li><a href="about-us.html">About Page</a></li>
+                            <li><a href="cart.html">Cart Page</a></li>
+                            <li><a href="checkout.html">Checkout Page</a></li>
+                            <li><a href="compare.html">Compare Page</a></li>
+                            <li><a href="login-register.html">Login & Register Page</a></li>
+                            <li><a href="account.html">Account Page</a></li>
+                            <li><a href="whishlist.html">Wishlist Page</a></li>
+                            <li><a href="faq.html">Frequently Questions</a></li>
+                            <li><a href="404.html">Error 404</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact-us.html">contact</a></li>
+                </ul>
+            </nav>
+            <!-- offcanvas menu end -->
+
+            <div class="offcanvas-settings">
+                <div class="inner-custom-scroll">
+                    <div class="language w-full">
+                        <h4 class="text-white capitalize font-normal pb-5 border-b border-solid border-gray-600 mb-5">language</h4>
+                        <ul>
+                            <li class="my-3"><a href="#" class="text-sm text-white hover:text-orange transition-all font-light capitalize tracking-wide">English</a></li>
+                            <li class="my-3"><a href="#" class="text-sm text-white hover:text-orange transition-all font-light capitalize tracking-wide">Español</a></li>
+                            <li class="my-3"><a href="#" class="text-sm text-white hover:text-orange transition-all font-light capitalize tracking-wide">日本語</a></li>
+                        </ul>
+                    </div>
+                    <div class="currency w-full">
+                        <h4 class="text-white capitalize font-normal pb-5 border-b border-solid border-gray-600 mb-5">currency</h4>
+                        <ul>
+                            <li class="my-3"><a href="#" class="text-sm text-white hover:text-orange transition-all font-light capitalize tracking-wide">usd - us dollar</a></li>
+                            <li class="my-3"><a href="#" class="text-sm text-white hover:text-orange transition-all font-light capitalize tracking-wide">eur - euro</a></li>
+                            <li class="my-3"><a href="#" class="text-sm text-white hover:text-orange transition-all font-light capitalize tracking-wide">jpy - japanese yen</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas-mobile-menu end -->

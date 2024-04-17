@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13e7166a-dcaa-4276-9d8e-5a9ec5958f5e" name="Changes" comment="sign up">
+      <change afterPath="$PROJECT_DIR$/home/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;P014r-13&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9e9132bb-457f-48ae-a659-a7dc0eada8da" />
+        <option name="url" value="https://github.com/P014r-13/shop.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2ewWCivD90oCbT0OWG995ZkKipd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "/home/armin/Desktop/shop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="shop" type="Python.DjangoServer" factoryName="Django server">
+      <module name="shop" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13e7166a-dcaa-4276-9d8e-5a9ec5958f5e" name="Changes" comment="" />
+      <created>1712815994535</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712815994535</updated>
+      <workItem from="1712815995852" duration="1893000" />
+      <workItem from="1712836290430" duration="1054000" />
+      <workItem from="1712837417601" duration="1748000" />
+      <workItem from="1712839186590" duration="2402000" />
+      <workItem from="1712856542128" duration="75000" />
+      <workItem from="1712856628374" duration="1855000" />
+      <workItem from="1712860736188" duration="33000" />
+      <workItem from="1712860791972" duration="2379000" />
+      <workItem from="1712863198960" duration="863000" />
+      <workItem from="1712864120851" duration="2084000" />
+      <workItem from="1713199173898" duration="599000" />
+      <workItem from="1713337260408" duration="1364000" />
+      <workItem from="1713339182378" duration="4782000" />
+      <workItem from="1713348589066" duration="11132000" />
+    </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1712816307060</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712816307060</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1712816335690</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712816335690</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add CustomUserManager">
+      <option name="closed" value="true" />
+      <created>1712836524939</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712836524939</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add UserModel">
+      <option name="closed" value="true" />
+      <created>1712836533020</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712836533020</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add home app">
+      <option name="closed" value="true" />
+      <created>1712836739715</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712836739715</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add home app">
+      <option name="closed" value="true" />
+      <created>1712836799731</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712836799731</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add home view">
+      <option name="closed" value="true" />
+      <created>1712855094383</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712855094383</updated>
+    </task>
+    <task id="LOCAL-00008" summary="delete comment">
+      <option name="closed" value="true" />
+      <created>1712855104248</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712855104248</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add media url">
+      <option name="closed" value="true" />
+      <created>1712855118649</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712855118649</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add home and user to installed apps / add templates dir / add auth user model and media url root">
+      <option name="closed" value="true" />
+      <created>1712855190171</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712855190171</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add full models">
+      <option name="closed" value="true" />
+      <created>1712855211770</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712855211770</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix some bugs">
+      <option name="closed" value="true" />
+      <created>1712855228935</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712855228935</updated>
+    </task>
+    <task id="LOCAL-00013" summary="change admin panel">
+      <option name="closed" value="true" />
+      <created>1712855240290</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712855240290</updated>
+    </task>
+    <task id="LOCAL-00014" summary="write home page">
+      <option name="closed" value="true" />
+      <created>1712855266379</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712855266379</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add urls">
+      <option name="closed" value="true" />
+      <created>1712855277166</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712855277166</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add base.html">
+      <option name="closed" value="true" />
+      <created>1712856028853</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712856028853</updated>
+    </task>
+    <task id="LOCAL-00017" summary="change home">
+      <option name="closed" value="true" />
+      <created>1712859397753</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859397753</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add LoginRequiredMixin">
+      <option name="closed" value="true" />
+      <created>1712859423458</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859423458</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add Login and LogOutView">
+      <option name="closed" value="true" />
+      <created>1712859445223</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859445223</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add navbar">
+      <option name="closed" value="true" />
+      <created>1712859457151</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859457151</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add jazzmin">
+      <option name="closed" value="true" />
+      <created>1712859467182</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859467182</updated>
+    </task>
+    <task id="LOCAL-00022" summary="login and logout urls">
+      <option name="closed" value="true" />
+      <created>1712859481330</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859481330</updated>
+    </task>
+    <task id="LOCAL-00023" summary="include user urls">
+      <option name="closed" value="true" />
+      <created>1712859516732</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859516732</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add login.html">
+      <option name="closed" value="true" />
+      <created>1712859638672</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859638672</updated>
+    </task>
+    <task id="LOCAL-00025" summary="change product price">
+      <option name="closed" value="true" />
+      <created>1712864171951</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864171951</updated>
+    </task>
+    <task id="LOCAL-00026" summary="change product price">
+      <option name="closed" value="true" />
+      <created>1712864184787</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864184787</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add verify field to user model">
+      <option name="closed" value="true" />
+      <created>1712864201112</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864201112</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add sign-up url">
+      <option name="closed" value="true" />
+      <created>1712864214662</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864214662</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Email host | email host user | email host password | email port | email use tls | email backend">
+      <option name="closed" value="true" />
+      <created>1712864261750</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864261750</updated>
+    </task>
+    <task id="LOCAL-00030" summary="sign-up and verify url">
+      <option name="closed" value="true" />
+      <created>1712864283623</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864283623</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add Signup view and otp verify view">
+      <option name="closed" value="true" />
+      <created>1712864303263</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864303263</updated>
+    </task>
+    <task id="LOCAL-00032" summary="otp verify">
+      <option name="closed" value="true" />
+      <created>1712864316876</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864316876</updated>
+    </task>
+    <task id="LOCAL-00033" summary="sign up">
+      <option name="closed" value="true" />
+      <created>1712864325326</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864325326</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="delete comment" />
+    <MESSAGE value="add media url" />
+    <MESSAGE value="add home and user to installed apps / add templates dir / add auth user model and media url root" />
+    <MESSAGE value="add full models" />
+    <MESSAGE value="fix some bugs" />
+    <MESSAGE value="change admin panel" />
+    <MESSAGE value="write home page" />
+    <MESSAGE value="add urls" />
+    <MESSAGE value="add base.html" />
+    <MESSAGE value="change home" />
+    <MESSAGE value="add LoginRequiredMixin" />
+    <MESSAGE value="add Login and LogOutView" />
+    <MESSAGE value="add navbar" />
+    <MESSAGE value="add jazzmin" />
+    <MESSAGE value="login and logout urls" />
+    <MESSAGE value="include user urls" />
+    <MESSAGE value="add login.html" />
+    <MESSAGE value="change product price" />
+    <MESSAGE value="add verify field to user model" />
+    <MESSAGE value="add sign-up url" />
+    <MESSAGE value="Email host | email host user | email host password | email port | email use tls | email backend" />
+    <MESSAGE value="sign-up and verify url" />
+    <MESSAGE value="add Signup view and otp verify view" />
+    <MESSAGE value="otp verify" />
+    <MESSAGE value="sign up" />
+    <option name="LAST_COMMIT_MESSAGE" value="sign up" />
+  </component>
+</project>

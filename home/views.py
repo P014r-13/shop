@@ -6,8 +6,16 @@ from home.models import Product
 
 
 class HomeView(TemplateView,LoginRequiredMixin):
-    template_name = 'home.html'
+    template_name = 'index.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        product = Product.objects.all()
+        context['products'] = product
+
+        return context
+class ProductView(TemplateView):
+    template_name = 'products.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         product = Product.objects.all()
