@@ -5,19 +5,14 @@
         <div class="px-4 md:px-10 2xl:px-24 py-6 lg:py-0">
             <div class="flex items-center lg:relative">
                 <div class="w-6/12 lg:w-2/12">
-                    <div class="logo"><a href="index.html"><img src="/media/assets/images/logo/logo.webp" alt="logo" loading="lazy" width="125" height="45" /></a></div>
+                    <div class="logo"><a href="index.html"><img src=/media/kisspng-faravahar-fravashi-zoroastrianism-religion-symbol-family-linear-fashion-figures-5b1fe82d72d924.9618035015288177094704.png alt="logo" loading="lazy" width="125" height="45" /></a></div>
                 </div>
                 <div class="hidden lg:flex flex-1 xl:relative">
                     <nav class="main-menu">
                         <ul class="flex flex-wrap">
                                 <a class="block py-10 xl:pr-6 md:pr-5 capitalize font-normal text-md text-primary hover:text-orange transition-all" href="/">Home</a>
-
-
-
-                            <li class="main-menu__item group">
                                 <a class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all" href="{% url 'products' %}">Shop</a>
-                            </li>
-                            <li class="main-menu__item"><a class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all" href="contact-us.html">Contact</a></li>
+                                <a class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all" href="#">Contact</a>
                         </ul>
                     </nav>
 
@@ -51,8 +46,13 @@
                                 </ul>
                                 <h4 class="text-md text-dark font-normal capitalize tracking-wide pb-5 border-b border-solid border-gray-600 mb-5">Account</h4>
                                 <ul>
-                                    <li class="my-4"><a href="login-register.html" class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">Login</a></li>
-                                    <li class="mt-4"><a href="account.html" class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">Create Account</a></li>
+                                    {% if request.user.is_authenticated %}
+                                    <li class="mt-4"><a href="{% url 'account' %}" class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">Account</a></li>
+
+                                    {% else %}
+                                    <li class="my-4"><a href="{% url 'login' %}" class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">Login</a></li>
+                                    <li class="mt-4"><a href="{% url 'signup' %}" class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">Create Account</a></li>
+                                    {% endif %}
                                 </ul>
                             </div>
 
