@@ -225,13 +225,7 @@
         </div>
 
     </div>
-    <!-- offcanvas-mobile-menu end -->
 
-
-    <!-- Header end -->
-
-
-    <!-- Hero section start -->
     <section class="hero-section relative">
         <div class="hero-slider overflow-hidden">
             <div class="swiper-container">
@@ -255,9 +249,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- swiper-slide end-->
 
-                    <!-- swiper-slide start -->
                     <div class="swiper-slide 2xl:h-screen lg:h-700px xs:h-600px flex flex-wrap items-center px-4 md:px-10 2xl:px-24 py-6 lg:py-0  bg-no-repeat bg-left-top xl:bg-right bg-cover" style="background-image: url('/media/assets/images/hero/slide2.webp');">
                         <div class="grid grid-cols-12">
                             <div class="col-span-12">
@@ -276,52 +268,16 @@
                             </div>
                         </div>
                     </div>
-                    <!-- swiper-slide end-->
 
-                    <!-- swiper-slide start -->
-                    <!-- <div class="swiper-slide 2xl:h-screen lg:h-700px xs:h-600px flex flex-wrap items-center px-4 md:px-10 2xl:px-24 py-6 lg:py-0  bg-no-repeat bg-left-top xl:bg-right bg-cover" style="background-image: url('/media/assets/images/hero/slide3.webp');">
-          <div class="grid grid-cols-12">
-            <div class="col-span-12">
-              <div class="slider-content md:max-w-[500px] lg:max-w-[600px] 2xl:max-w-[800px]">
-                <span class="text-lg font-normal text-primary block mb-3">Feel The Rhythm.</span>
-                <h1 class="font-playfair font-bold text-orange text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl mb-5">Spark Up Your Passion <span class="md:block mt-5">With Good Music.</span></h1>
-                <hr class="w-16 h-1 bg-orange mb-7 border-0">
-                <p class="font-normal text-primary text-sm lg:text-md max-w-[700px]">
-                  Experience the decibels like your ears deserve to. Safe for
-                  the ears, very for the heart. A treat to your ears.
-                </p>
-                <div class="inline-block mt-12">
-                  <a class="flex flex-wrap items-center bg-primary transition-all hover:bg-orange hover:text-white px-3 md:px-4 xl:px-10 py-3 md:py-4 xl:py-5 rounded-full text-orange capitalize font-medium text-sm lg:text-md leading-normal" href="shop-grid-3-column.html">Explore More<i class="icon-basket-loaded ml-3 xl:ml-5"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-                    <!-- swiper-slide end-->
                 </div>
             </div>
 
-            <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
-            <!-- swiper navigation -->
 
-            <!--     <div class="hidden">
-      <div class="swiper-button-prev">
-        <i class="ion-chevron-left"></i>
-      </div>
-      <div class="swiper-button-next">
-        <i class="ion-chevron-right"></i>
-      </div>
-    </div> -->
         </div>
     </section>
 
 
-    <!-- Hero section end -->
-
-
-
-    <!-- Feartured section start -->
     <section class="pt-24">
         <div class="container">
             <div class="flex items-center -mx-4 flex-wrap">
@@ -338,15 +294,12 @@
                         make a type specimen book. sint occaeca Excepteur sint occaecat
                         cupidatat non proident.
                     </p>
-                    <a href="single-product.html" class="bg-primary transition-all hover:bg-orange hover:text-white px-5 md:px-12 py-3 md:py-4 xl:py-4 rounded-full text-orange capitalize font-medium text-sm lg:text-md inline-block mt-8 leading-normal">Buy Now</a>
+                    <a href="{% url 'products' %}" class="bg-primary transition-all hover:bg-orange hover:text-white px-5 md:px-12 py-3 md:py-4 xl:py-4 rounded-full text-orange capitalize font-medium text-sm lg:text-md inline-block mt-8 leading-normal">Buy Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Feartured section end -->
-
-    <!-- Feartured section start -->
     <section class="pt-24 pb-24">
         <div class="container">
             <div class="flex items-center -mx-4 flex-wrap">
@@ -359,7 +312,7 @@
                         make a type specimen book. sint occaeca Excepteur sint occaecat
                         cupidatat non proident.
                     </p>
-                    <a href="single-product.html" class="bg-primary transition-all hover:bg-orange hover:text-white px-5 md:px-12 py-3 md:py-4 xl:py-4 rounded-full text-orange capitalize font-medium text-sm lg:text-md inline-block mt-8 leading-normal">Buy Now</a>
+                    <a href="{% url 'products' %}" class="bg-primary transition-all hover:bg-orange hover:text-white px-5 md:px-12 py-3 md:py-4 xl:py-4 rounded-full text-orange capitalize font-medium text-sm lg:text-md inline-block mt-8 leading-normal">Buy Now</a>
                 </div>
                 <div class="w-full md:w-1/2 px-4">
                     <img class="mt-8 md:mt-0 w-full h-full" src="/media/assets/images/featured-products/product2.webp" alt="product image" loading="lazy" width="612" height="723" />
@@ -368,10 +321,7 @@
         </div>
     </section>
 
-    <!-- Feartured section end -->
 
-
-    <!-- Banner section start -->
     <section class="pt-24 pb-24 bg-no-repeat bg-cover bg-center" style="background-image: url('/media/assets/images/banner/bg.webp');">
         <div class="container">
             <div class="w-full flex items-center -mx-4 flex-wrap justify-end px-4">
@@ -401,16 +351,13 @@
                             Water Dust Proof
                         </li>
                     </ul>
-                    <a href="single-product.html" class="bg-white transition-all hover:bg-orange hover:text-white px-5 md:px-12 py-3 md:py-4 xl:py-4 rounded-full text-orange capitalize font-medium text-sm lg:text-md inline-block leading-normal">Buy Now</a>
+                    <a href="{% url 'products' %}" class="bg-white transition-all hover:bg-orange hover:text-white px-5 md:px-12 py-3 md:py-4 xl:py-4 rounded-full text-orange capitalize font-medium text-sm lg:text-md inline-block leading-normal">Buy Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Banner section end -->
 
-
-    <!-- Product section start -->
     <section class="product-section pt-24 pb-24">
         <div class="container">
 
@@ -424,7 +371,7 @@
 
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-start-1 md:col-start-3 col-span-12 md:col-span-8">
-                    <!-- countdown start -->
+
 
                     <div class="relative py-4 p-4 before:absolute before:w-full before:empty before:block before:h-full before:z-10 before:shadow-deal before:inset-x-2 before:top-2 after:absolute after:w-full after:empty after:block after:h-full after:z-10 after:shadow-deal after:inset-x-3 after:top-3 mb-12">
                         <div class="countdown item-1 flex flex-wrap justify-center pt-4" data-countdown="2022/11/20" data-format="short">
@@ -446,7 +393,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- countdown end -->
+
 
 
                 </div>
@@ -457,62 +404,14 @@
                         <div class="product-carousel overflow-hidden p-4">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
-                                    <!-- swiper-slide start -->
+
                                     <div class="swiper-slide">
                                         <div class="border border-solid border-gray-300 transition-all hover:shadow-product group">
                                             <div class="relative overflow-hidden">
                                                 <span class="font-bold uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                                 <span class="font-bold uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                                 <img class="w-full h-full" src="/media/assets/images/products/lg/product3.webp" alt="product image" loading="lazy" width="432" height="480" />
-                                                <!-- actions start -->
 
-                                                <div class="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 z-10">
-                                                    <ul class="flex items-center justify-center bg-white shadow rounded-full h-0 transition-all group-hover:h-16 duration-500 overflow-hidden">
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="#modal-cart" class="text-dark flex items-center justify-center text-md hover:text-orange modal-toggle" data-tippy-content="Quick View" aria-label="Quick View">
-                                                                <i class="icon-magnifier"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="whishlist.html" class="text-dark flex items-center justify-center text-md hover:text-orange" data-tippy-content="Add to wishlist" aria-label="wishlist">
-                                                                <i class="icon-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="compare.html" class="text-dark flex items-center justify-center text-md hover:text-orange" data-tippy-content="Compare" aria-label="Compare">
-                                                                <i class="icon-refresh"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 pr-7 md:py-5 md:pl-8 md:pr-8">
-                                                            <a href="#modal-addto-cart" class="text-dark flex items-center justify-center text-md hover:text-orange modal-toggle" aria-label="add to cart" data-tippy-content="Add to cart">
-                                                                <i class="icon-bag"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
-                                                <!-- actions end -->
-
-
-                                                <!-- variants start -->
-
-                                                <div class="p-2 bg-gray-200 shadow absolute left-2 right-2 -bottom-40 group-hover:bottom-2 z-20 transition-all duration-500 ease-linear">
-                                                    <ul class="flex flex-wrap items-center justify-center mb-3">
-                                                        <li class="mx-1 leading-none"><button class="text-sm">sm</button></li>
-                                                        <li class="mx-1 leading-none"><button class="text-sm">l</button></li>
-                                                        <li class="mx-1 leading-none"><button class="text-sm">m</button></li>
-                                                        <li class="mx-1 leading-none"><button class="text-sm">xl</button></li>
-                                                        <li class="mx-1 leading-none"><button class="text-sm">xxl</button></li>
-                                                    </ul>
-                                                    <ul class="flex flex-wrap items-center justify-center">
-                                                        <li class="mx-1 leading-none"><button class="w-4 h-4 rounded-full bg-orange" aria-label="colors"></button></li>
-                                                        <li class="mx-1 leading-none"><button class="w-4 h-4 rounded-full bg-primary" aria-label="variants"></button></li>
-                                                        <li class="mx-1 leading-none"><button class="w-4 h-4 rounded-full bg-indigo-600" aria-label="variants"></button></li>
-                                                        <li class="mx-1 leading-none"><button class="w-4 h-4 rounded-full bg-dark" aria-label="variants"></button></li>
-                                                    </ul>
-                                                </div>
-
-                                                <!-- variants end -->
                                             </div>
 
                                             <div class="py-5 px-4">
@@ -528,12 +427,10 @@
                                         </div>
 
                                     </div>
-                                    <!-- swiper-slide end-->
-                                    <!-- swiper-slide start -->
+
                                     <div class="swiper-slide">
                                         <div class="border border-solid border-gray-300 transition-all hover:shadow-product group">
 
-                                            <!-- tab-contents start -->
 
                                             <div id="tab1" class="relative overflow-hidden">
                                                 <span class="font-bold uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 left-3">New</span>
@@ -551,39 +448,6 @@
                                                     </div>
                                                 </div>
 
-                                                <!-- tab-contents end -->
-
-                                                <!-- actions start -->
-
-                                                <div class="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 z-10">
-                                                    <ul class="flex items-center justify-center bg-white shadow rounded-full h-0 transition-all group-hover:h-16 duration-500 overflow-hidden">
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="#modal-cart" class="text-dark flex items-center justify-center text-md hover:text-orange modal-toggle" data-tippy-content="Quick View" aria-label="Quick View">
-                                                                <i class="icon-magnifier"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="whishlist.html" class="text-dark flex items-center justify-center text-md hover:text-orange" data-tippy-content="Add to wishlist" aria-label="Add to wishlist">
-                                                                <i class="icon-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="compare.html" class="text-dark flex items-center justify-center text-md hover:text-orange" data-tippy-content="Compare" aria-label="compare">
-                                                                <i class="icon-refresh"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 pr-7 md:py-5 md:pl-8 md:pr-8">
-                                                            <a href="#modal-addto-cart" class="text-dark flex items-center justify-center text-md hover:text-orange modal-toggle" data-tippy-content="Add to cart" aria-label="Add to cart">
-                                                                <i class="icon-bag"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
-                                                <!-- actions end -->
-
-                                                <!-- tabs nav start -->
-
                                                 <div class="p-2 bg-gray-200 shadow absolute left-2 right-2 -bottom-40 group-hover:bottom-2 z-20 transition-all duration-500 ease-linear">
                                                     <ul class="tab-nav flex flex-wrap items-center justify-center">
                                                         <li class="mx-1"><a href="#product1" class="w-8 h-8 overflow-hidden rounded-full block"><img src="/media/assets/images/products/sm/product5.webp" alt="product image" loading="lazy" width="45" height="50" /></a></li>
@@ -591,7 +455,7 @@
                                                         <li class="mx-1"><a href="#product3" class="w-8 h-8 overflow-hidden rounded-full block"><img src="/media/assets/images/products/sm/product3.webp" alt="product image" loading="lazy" width="45" height="50" /></a></li>
                                                     </ul>
                                                 </div>
-                                                <!-- tabs nav end -->
+
                                             </div>
 
                                             <div class="py-5 px-4">
@@ -608,76 +472,20 @@
                                         </div>
 
                                     </div>
-                                    <!-- swiper-slide end-->
 
-                                    <!-- swiper-slide start -->
                                     <div class="swiper-slide">
                                         <div class="border border-solid border-gray-300 transition-all hover:shadow-product group">
 
-                                            <!-- tab-contents start -->
+
 
                                             <div id="tab2" class="relative overflow-hidden">
                                                 <div class="tab-contents">
                                                     <div id="product4" class="tab-content">
                                                         <img class="w-full h-full" src="/media/assets/images/products/lg/product2.webp" alt="product image" loading="lazy" width="432" height="480" />
                                                     </div>
-                                                    <div id="product5" class="tab-content">
-                                                        <img class="w-full h-full" src="/media/assets/images/products/lg/product1.webp" alt="product image" loading="lazy" width="432" height="480" />
-                                                    </div>
-                                                    <div id="product6" class="tab-content">
-                                                        <img class="w-full h-full" src="/media/assets/images/products/lg/product3.webp" alt="product image" loading="lazy" width="432" height="480" />
-                                                    </div>
-                                                    <div id="product7" class="tab-content">
-                                                        <img class="w-full h-full" src="/media/assets/images/products/lg/product4.webp" alt="product image" loading="lazy" width="432" height="480" />
-                                                    </div>
-                                                    <div id="product8" class="tab-content">
-                                                        <img class="w-full h-full" src="/media/assets/images/products/lg/product5.webp" alt="product image" loading="lazy" width="432" height="480" />
-                                                    </div>
                                                 </div>
 
-                                                <!-- tab-contents end -->
 
-                                                <!-- actions start -->
-
-                                                <div class="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 z-10">
-                                                    <ul class="flex items-center justify-center bg-white shadow rounded-full h-0 transition-all group-hover:h-16 duration-500 overflow-hidden">
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="#modal-cart" class="text-dark flex items-center justify-center text-md hover:text-orange modal-toggle" data-tippy-content="Quick View" aria-label="Quick View">
-                                                                <i class="icon-magnifier"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="whishlist.html" class="text-dark flex items-center justify-center text-md hover:text-orange" data-tippy-content="Add to wishlist" aria-label="Add to wishlist">
-                                                                <i class="icon-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="compare.html" class="text-dark flex items-center justify-center text-md hover:text-orange" data-tippy-content="Compare" aria-label="compare">
-                                                                <i class="icon-refresh"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 pr-7 md:py-5 md:pl-8 md:pr-8">
-                                                            <a href="#modal-addto-cart" class="text-dark flex items-center justify-center text-md hover:text-orange modal-toggle" data-tippy-content="Add to cart" aria-label="Add to cart">
-                                                                <i class="icon-bag"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
-                                                <!-- actions end -->
-
-                                                <!-- tabs nav start -->
-
-                                                <div class="p-2 bg-gray-200 shadow absolute left-2 right-2 -bottom-40 group-hover:bottom-2 z-20 transition-all duration-500 ease-linear">
-                                                    <ul class="tab-nav flex flex-wrap items-center justify-center">
-                                                        <li class="mx-1"><a href="#product4" class="w-8 h-8 overflow-hidden rounded-full block"><img src="/media/assets/images/products/sm/product2.webp" alt="product image" loading="lazy" width="45" height="50" /></a></li>
-                                                        <li class="mx-1"><a href="#product5" class="w-8 h-8 overflow-hidden rounded-full block"><img src="/media/assets/images/products/sm/product1.webp" alt="product image" loading="lazy" width="45" height="50" /></a></li>
-                                                        <li class="mx-1"><a href="#product6" class="w-8 h-8 overflow-hidden rounded-full block"><img src="/media/assets/images/products/sm/product3.webp" alt="product image" loading="lazy" width="45" height="50" /></a></li>
-                                                        <li class="mx-1"><a href="#product7" class="w-8 h-8 overflow-hidden rounded-full block"><img src="/media/assets/images/products/sm/product4.webp" alt="product image" loading="lazy" width="45" height="50" /></a></li>
-                                                        <li class="mx-1"><a href="#product8" class="w-8 h-8 overflow-hidden rounded-full block"><img src="/media/assets/images/products/sm/product5.webp" alt="product image" loading="lazy" width="45" height="50" /></a></li>
-                                                    </ul>
-                                                </div>
-                                                <!-- tabs nav end -->
                                             </div>
 
                                             <div class="py-5 px-4">`
@@ -693,9 +501,7 @@
                                         </div>
 
                                     </div>
-                                    <!-- swiper-slide end-->
 
-                                    <!-- swiper-slide start -->
                                     <div class="swiper-slide">
                                         <div class="border border-solid border-gray-300 transition-all hover:shadow-product group">
                                             <div class="relative overflow-hidden">
@@ -703,55 +509,8 @@
                                                 <span class="font-bold uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                                 <span class="font-bold uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                                 <img class="w-full h-full" src="/media/assets/images/products/lg/product3.webp" alt="product image" loading="lazy" width="432" height="480" />
-                                                <!-- actions start -->
-
-                                                <div class="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 z-10">
-                                                    <ul class="flex items-center justify-center bg-white shadow rounded-full h-0 transition-all group-hover:h-16 duration-500 overflow-hidden">
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="#modal-cart" class="text-dark flex items-center justify-center text-md hover:text-orange modal-toggle" data-tippy-content="Quick View" aria-label="Quick View">
-                                                                <i class="icon-magnifier"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="whishlist.html" class="text-dark flex items-center justify-center text-md hover:text-orange" data-tippy-content="Add to wishlist" aria-label="Add to wishlist">
-                                                                <i class="icon-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 md:py-5 md:pl-8">
-                                                            <a href="compare.html" class="text-dark flex items-center justify-center text-md hover:text-orange" data-tippy-content="Compare" aria-label="compare">
-                                                                <i class="icon-refresh"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li class="py-4 pl-7 pr-7 md:py-5 md:pl-8 md:pr-8">
-                                                            <a href="#modal-addto-cart" class="text-dark flex items-center justify-center text-md hover:text-orange modal-toggle" data-tippy-content="Add to cart" aria-label="Add to cart">
-                                                                <i class="icon-bag"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
-                                                <!-- actions end -->
 
 
-                                                <!-- variants start -->
-
-                                                <div class="p-2 bg-gray-200 shadow absolute left-2 right-2 -bottom-40 group-hover:bottom-2 z-20 transition-all duration-500 ease-linear">
-                                                    <ul class="flex flex-wrap items-center justify-center mb-3">
-                                                        <li class="mx-1 leading-none"><button class="text-sm">sm</button></li>
-                                                        <li class="mx-1 leading-none"><button class="text-sm">l</button></li>
-                                                        <li class="mx-1 leading-none"><button class="text-sm">m</button></li>
-                                                        <li class="mx-1 leading-none"><button class="text-sm">xl</button></li>
-                                                        <li class="mx-1 leading-none"><button class="text-sm">xxl</button></li>
-                                                    </ul>
-                                                    <ul class="flex flex-wrap items-center justify-center">
-                                                        <li class="mx-1 leading-none"><button class="w-4 h-4 rounded-full bg-orange" aria-label="colors"></button></li>
-                                                        <li class="mx-1 leading-none"><button class="w-4 h-4 rounded-full bg-primary" aria-label="variants"></button></li>
-                                                        <li class="mx-1 leading-none"><button class="w-4 h-4 rounded-full bg-indigo-600" aria-label="variants"></button></li>
-                                                        <li class="mx-1 leading-none"><button class="w-4 h-4 rounded-full bg-dark" aria-label="variants"></button></li>
-                                                    </ul>
-                                                </div>
-
-                                                <!-- variants end -->
                                             </div>
 
                                             <div class="py-5 px-4">
@@ -767,15 +526,10 @@
                                         </div>
 
                                     </div>
-                                    <!-- swiper-slide end-->
                                 </div>
                             </div>
 
-                            <!-- Add Pagination -->
 
-                            <!-- <div class="swiper-pagination"></div> -->
-
-                            <!-- swiper navigation -->
 
                             <div class="swiper-buttons">
                                 <div class="swiper-button-prev right-auto left-4  w-12 h-12 rounded-full bg-white border border-solid border-gray-400 text-sm text-dark opacity-100 transition-all hover:text-orange hover:border-orange"></div>
@@ -792,10 +546,7 @@
 
         </div>
     </section>
-    <!-- Product section end -->
 
-
-    <!-- Vedio Banner section start -->
     <section class="vedio-banner-section relative h-sm-b-h md:h-full">
         <img class="object-cover h-full w-full" src="/media/assets/images/banner/video-bg.webp" alt="banner image" loading="lazy" width="1920" height="902" />
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full xl:max-w-3xl lg:px-10 px-4">
@@ -810,10 +561,7 @@
             </a>
         </div>
     </section>
-    <!-- Vedio Banner section end -->
 
-
-    <!-- Blog section start -->
     <section class="blog-carousel-section pt-24 pb-24">
         <div class="container">
             <div class="grid grid-cols-12 gap-4">
@@ -848,8 +596,7 @@
                                             <a class="bg-white transition-all hover:bg-orange hover:border-orange hover:text-white text-dark capitalize font-medium text-sm inline-block border border-solid border-gray-300 px-8 py-4 leading-none mb-[10px]" href="blog-details.html">blog details</a>
                                         </div>
                                     </div>
-                                    <!-- swiper-slide end-->
-                                    <!-- swiper-slide start -->
+
                                     <div class="swiper-slide">
                                         <div class="border border-solid border-gray-300 p-[20px] md:p-[30px] group">
                                             <div class="mb-6">
@@ -870,8 +617,7 @@
                                             <a class="bg-white transition-all hover:bg-orange hover:border-orange hover:text-white text-dark capitalize font-medium text-sm inline-block border border-solid border-gray-300 px-8 py-4 leading-none mb-[10px]" href="blog-details.html">blog details</a>
                                         </div>
                                     </div>
-                                    <!-- swiper-slide end-->
-                                    <!-- swiper-slide start -->
+
                                     <div class="swiper-slide">
                                         <div class="border border-solid border-gray-300 p-[20px] md:p-[30px] group">
                                             <div class="mb-6">
@@ -891,8 +637,7 @@
                                             <a class="bg-white transition-all hover:bg-orange hover:border-orange hover:text-white text-dark capitalize font-medium text-sm inline-block border border-solid border-gray-300 px-8 py-4 leading-none mb-[10px]" href="blog-details.html">blog details</a>
                                         </div>
                                     </div>
-                                    <!-- swiper-slide end-->
-                                    <!-- swiper-slide start -->
+
                                     <div class="swiper-slide">
                                         <div class="border border-solid border-gray-300 p-[20px] md:p-[30px] group">
                                             <div class="mb-6">
@@ -913,16 +658,9 @@
                                             <a class="bg-white transition-all hover:bg-orange hover:border-orange hover:text-white text-dark capitalize font-medium text-sm inline-block border border-solid border-gray-300 px-8 py-4 leading-none mb-[10px]" href="blog-details.html">blog details</a>
                                         </div>
                                     </div>
-                                    <!-- swiper-slide end-->
-
                                 </div>
                             </div>
 
-                            <!-- Add Pagination -->
-
-                            <!-- <div class="swiper-pagination"></div> -->
-
-                            <!-- swiper navigation -->
 
                             <div class="swiper-buttons">
                                 <div class="swiper-button-prev right-auto left-2 md:-left-2  w-12 h-12 rounded-full bg-white border border-solid border-gray-600 text-sm text-dark opacity-100 transition-all hover:text-orange hover:border-orange"></div>
@@ -938,19 +676,15 @@
             </div>
         </div>
     </section>
-    <!-- Blog section end -->
 
-    <!-- Footer section start -->
 {% include 'footer.html' %}
-    <!-- Footer section end -->
+
 
     <a id="scrollUp" class="w-12 h-12 rounded-full bg-orange text-white fixed right-5 bottom-16 flex flex-wrap items-center justify-center transition-all duration-300 z-10" href="#" aria-label="scroll up"><i class="icon-arrow-up"></i></a>
 
-    <!-- Modals -->
-    <!-- modal-overlay start -->
+
     <div class="modal-overlay hidden fixed inset-0 bg-black opacity-50 z-10"></div>
-    <!-- modal-overlay end -->
-    <!-- modal-mobile-menu start -->
+
     <div id="modal-cart" class="modal fixed opacity-0 transition-opacity duration-300 ease-linear md:w-11/12 md:max-w-1000 hidden z-40 left-8 right-8 md:left-1/2 top-1/2 transform -translate-y-1/2 md:-translate-x-1/2 p-7 bg-white">
 
 
@@ -990,13 +724,12 @@
         </div>
 
     </div>
-    <!-- modal-mobile-menu end -->
 
 
-    <!-- modal-overlay start -->
+
+
     <div class="modal-overlay hidden fixed inset-0 bg-black opacity-50 z-30"></div>
-    <!-- modal-overlay end -->
-    <!-- modal-mobile-menu start -->
+
     <div id="modal-addto-cart" class="modal fixed opacity-0 transition-opacity duration-300 ease-linear md:w-11/12 md:max-w-1000 hidden z-50 left-8 right-8 md:left-1/2 top-1/2 transform -translate-y-1/2 md:-translate-x-1/2 p-7 bg-white mx-auto">
 
 
@@ -1016,25 +749,6 @@
         </div>
 
     </div>
-    <!-- modal-mobile-menu end -->
 
-
-
-    <!-- JS Vendor, Plugins & Activation Script Files -->
-
-    <!-- Vendors JS -->
-    <script src="/media/assets/js/vendor/modernizr-3.11.7.min.js"></script>
-    <script src="/media/assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="/media/assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
-    <!-- Plugins JS -->
-    <script src="/media/assets/js/plugins/swiper-bundle.min.js"></script>
-    <script src="/media/assets/js/plugins/popper.min.js"></script>
-    <script src="/media/assets/js/plugins/tippy-bundle.umd.min.js"></script>
-    <cript src="/media/assets/js/plugins/jquery.magnific-popup.min.js"></cript>
-    <script src="/media/assets/js/plugins/jquery.ajaxchimp.min.js"></script>
-
-    <!-- Activation JS -->
-    <script src="/media/assets/js/main.js"></script>
-          <script src="https://cdn.tailwindcss.com"></script>
 
 {% endblock %}
