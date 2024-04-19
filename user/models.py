@@ -10,8 +10,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     otp = models.IntegerField(blank=True,null=True)
     verify = models.BooleanField(default=False)
+    class AccountType(models.TextChoices):
+        member = 'member', 'Member'
+        operator = 'operator', 'Operator'
+        admin = 'admin', 'Admin'
+        staff = 'staff', 'Staff'
+    account_type = models.CharField(max_length=10, choices=AccountType.choices, default=AccountType.member)
     USERNAME_FIELD = 'email'
-
     objects = CustomUserManager()
 
     def __str__(self):
