@@ -1,26 +1,7 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 {% include 'navbar.html' %}
-    <!-- offcanvas-mobile-menu end -->
-
-
-    <!-- offcanvas-mobile-menu start -->
-
-    <!-- offcanvas-mobile-menu end -->
-
-
-    <!-- Header end -->
-
-
-    <!-- Hero section start -->
-
-
-    <!-- Hero section end -->
-
-
-
-    <!-- blog grid section start -->
-
 
 <div class="py-9 bg-gray-light">
     <div class="container">
@@ -37,9 +18,6 @@
 </div>
 
 
-<!-- Hero section end -->
-
-<!-- blog grid section start -->
 
 <div class="py-24">
     <div class="container">
@@ -66,14 +44,12 @@
                 <div class="mt-10">
                     <div id="grid" class="shop-tab-content active">
                         <div class="flex flex-wrap -mx-4">
-                            <!-- Product cards start -->
+
                             <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-4 mb-8">
                                 <div class="border border-solid border-gray-300 transition-all hover:shadow-product group relative">
-                                    <!-- Product card content -->
+
                                 </div>
-                            </div>
-                            <!-- Repeat the above div for each product card -->
-                            <!-- Product cards end -->
+
                         </div>
                     </div>
                 </div>
@@ -92,7 +68,7 @@
                                             <span class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="w-full h-full" src="{{ product.image.url }}" alt="product image" loading="lazy" width="432" height="480" />
-                                            <!-- actions start -->
+
 
                                             <div class="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 z-10">
                                                 <ul class="flex items-center justify-center bg-white shadow rounded-full h-0 transition-all group-hover:h-16 duration-500 overflow-hidden">
@@ -109,10 +85,6 @@
                                                 </ul>
                                             </div>
 
-                                            <!-- actions end -->
-
-
-                                            <!-- variants start -->
 
 
 
@@ -132,9 +104,9 @@
                                             <span class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 left-3">New</span>
                                             <span class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="/media/assets/images/products/drone/product2.webp" alt="product image" loading="lazy" width="432" height="480" />
+                                            <img class="w-full h-full" src="{% static 'assets/images/products/drone/product2.webp' %}" alt="product image" loading="lazy" width="432" height="480" />
 
-                                            <!-- actions start -->
+
 
                                             <div class="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 z-10">
                                                 <ul class="flex items-center justify-center bg-white shadow rounded-full h-0 transition-all group-hover:h-16 duration-500 overflow-hidden">
@@ -151,7 +123,7 @@
                                                 </ul>
                                             </div>
 
-                                            <!-- actions end -->
+
                                         </div>
 
                                         <div class="py-5 px-4">
@@ -165,8 +137,8 @@
 
                                 <div class="w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 px-4 my-4">
                                     <div class="border border-solid border-gray-300 transition-all hover:shadow-product group relative">
-                                        <img class="w-full h-full" src="/media/assets/images/products/drone/product3.webp" alt="product image" loading="lazy" width="432" height="480" />
-                                        <!-- actions start -->
+                                        <img class="w-full h-full" src="{% static 'assets/images/products/drone/product3.webp' %}" alt="product image" loading="lazy" width="432" height="480" />
+
 
                                         <div class="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 z-10">
                                             <ul class="flex items-center justify-center bg-white shadow rounded-full h-0 transition-all group-hover:h-16 duration-500 overflow-hidden">
@@ -183,8 +155,6 @@
                                             </ul>
                                         </div>
 
-                                        <!-- actions end -->
-
 
                                         <div class="py-5 px-4">
                                             <h4><a class="block text-base hover:text-orange transition-all" href="#">Inisd deofessor smpden</a></h4>
@@ -200,8 +170,7 @@
                                             <span class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 left-3">New</span>
                                             <span class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="/media/assets/images/products/drone/product4.webp" alt="product image" loading="lazy" width="432" height="480" />
-                                            <!-- actions start -->
+                                            <img class="w-full h-full" src="{% static 'assets/images/products/drone/product4.webp' %}" alt="product image" loading="lazy" width="432" height="480" />
 
                                             <div class="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 z-10">
                                                 <ul class="flex items-center justify-center bg-white shadow rounded-full h-0 transition-all group-hover:h-16 duration-500 overflow-hidden">

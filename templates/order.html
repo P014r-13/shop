@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 {% include 'navbar.html' %}
 
@@ -38,7 +39,7 @@
                             <tr>
                                 <td class="w-32 p-3 border border-solid border-gray-600 text-center">
                                     <a href="#">
-                                        <img src="/media/assets/images/single-product/sm/product1.webp" alt="product image"></a>
+                                        <img src="{% static 'assets/images/single-product/sm/product1.webp' %}" alt="product image"></a>
                                 </td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="transition-all hover:text-orange">Birpod product unsde</a><span>m / gold</span>
@@ -61,7 +62,7 @@
                             <tr>
                                 <td class="w-32 p-3 border border-solid border-gray-600 text-center">
                                     <a href="#">
-                                        <img src="/media/assets/images/single-product/sm/product2.webp" alt="product image"></a>
+                                        <img src="{% load static %}" alt="product image"></a>
                                 </td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="transition-all hover:text-orange">Birpod product unsde</a><span>m / gold</span>
@@ -84,7 +85,7 @@
                             <tr>
                                 <td class="w-32 p-3 border border-solid border-gray-600 text-center">
                                     <a href="#">
-                                        <img src="/media/assets/images/single-product/sm/product3.webp" alt="product image"></a>
+                                        <img src="{% load static %}" alt="product image"></a>
                                 </td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="transition-all hover:text-orange">Birpod product unsde</a><span>m / gold</span>
@@ -107,7 +108,7 @@
                             <tr>
                                 <td class="w-32 p-3 border border-solid border-gray-600 text-center">
                                     <a href="#">
-                                        <img src="/media/assets/images/single-product/sm/product4.webp" alt="product image"></a>
+                                        <img src="{% static 'assets/images/single-product/sm/product4.webp' %}" alt="product image"></a>
                                 </td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="transition-all hover:text-orange">Birpod product unsde</a><span>m / gold</span>
@@ -232,7 +233,7 @@
 
         <div class="grid md:grid-cols-2 gap-4">
             <div class="w-full">
-                <img class="w-full h-full" src="/media/assets/images/products/lg/product1.webp" alt="product image" loading="lazy" width="432" height="480">
+                <img class="w-full h-full" src="{% static 'assets/images/products/lg/product1.webp' %}" alt="product image" loading="lazy" width="432" height="480">
             </div>
             <div>
                 <button class="text-black text-lg absolute top-7 right-7 modal-close"><i class="icon-close"></i></button>
@@ -273,7 +274,7 @@
 
         <div class="md:flex md:flex-wrap">
             <div class="md:mr-5 md:flex-30 mb-5 md:mb-0">
-                <img class="w-full" src="/media/assets/images/products/lg/product1.webp" alt="product image" loading="lazy" width="432" height="480">
+                <img class="w-full" src="{% static 'assets/images/products/lg/product1.webp' %}" alt="product image" loading="lazy" width="432" height="480">
             </div>
             <div class="md:flex-auto">
                 <button class="text-black text-lg absolute top-7 right-7 modal-close"><i class="icon-close"></i></button>
