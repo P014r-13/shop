@@ -31,3 +31,6 @@ class AccountView(TemplateView):
         user = self.request.user
         context['user'] = user
         return context
+
+class OrderView(TemplateView):
+    template_name = 'order.html'
