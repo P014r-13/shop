@@ -1,11 +1,10 @@
 from django.test import TestCase
 from django.core.exceptions import ValidationError
-from .models import Product, Category,Order,Order_Item,Code,Address
-from home.models import User
+from .models import Product, Category, Order, OrderItem, Address
+from user.models import Code, User
 class ProductModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        # Set up non-modified objects used by all test methods
         Product.objects.create(name='Test Product', price=100, count=10, disc='Test Description', category=Category.objects.create(name='Test Category'))
 
     def test_product_name_label(self):
@@ -47,6 +46,36 @@ class ProductModelTest(TestCase):
         product = Product.objects.get(id=1)
         self.assertEqual(str(product), product.name)
 
+    def create_product(self, name, price, count, disc, category):
+        return Product.objects.create(
+            name=name,
+            price=price,
+            count=count,
+            disc=disc,
+            category=category
+        )
+
+    def read_product(self, id):
+        return Product.objects.get(id=id)
+
+    def update_product(self, product, name=None, price=None, count=None, disc=None, category=None):
+        if name:
+            product.name = name
+        if price:
+            product.price = price
+        if count:
+            product.count = count
+        if disc:
+            product.disc = disc
+        if category:
+            product.category = category
+        product.save()
+        return product
+
+    def delete_product(self, product):
+        product.delete()
+
+
 class CategoryModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
@@ -66,13 +95,27 @@ class CategoryModelTest(TestCase):
         category = Category.objects.get(id=1)
         self.assertEqual(str(category), category.name)
 
+    def create_category(self, name, parent=None):
+        return Category.objects.create(name=name, parent=parent)
 
+    def read_category(self, id):
+        return Category.objects.get(id=id)
+
+    def update_category(self, category, name=None, parent=None):
+        if name:
+            category.name = name
+        if parent:
+            category.parent = parent
+        category.save()
+        return category
+
+    def delete_category(self, category):
+        category.delete()
 
 
 class AddressModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        # Set up non-modified objects used by all test methods
         Address.objects.create(user=User.objects.create(email='testuser@example.com', password='testpassword'), address='123 Test St', city=Address.City.Tehran)
 
     def test_address_user_label(self):
@@ -94,10 +137,34 @@ class AddressModelTest(TestCase):
         address = Address.objects.get(id=1)
         self.assertEqual(str(address), address.address)
 
+    def create_address(self, user, address, city):
+        return Address.objects.create(
+            user=user,
+            address=address,
+            city=city
+        )
+
+    def read_address(self, id):
+        return Address.objects.get(id=id)
+
+    def update_address(self, user=None, address=None, city=None):
+        if user:
+            address.user = user
+        if address:
+            address.address = address
+        if city:
+            address.city = city
+        address.save()
+        return address
+
+    def delete_address(self, address):
+        address.delete()
+
+
+
 class OrderModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        # Set up non-modified objects used by all test methods
         Order.objects.create(user=User.objects.create(email='testuser@example.com', password='testpassword'), date='2024-04-19 12:00:00', status=True, code=Code.objects.create(code=12345, time='12:00'))
 
     def test_order_user_label(self):
@@ -128,25 +195,25 @@ class OrderItemModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         # Set up non-modified objects used by all test methods
-        Order_Item.objects.create(order=Order.objects.create(user=User.objects.create(email='testuser@example.com', password='testpassword'), date='2024-04-19 12:00:00', status=True, code=Code.objects.create(code=12345, time='12:00')), product=Product.objects.create(name='Test Product', price=100, count=10, disc='Test Description', category=Category.objects.create(name='Test Category')), quantity=2)
+        OrderItem.objects.create(order=Order.objects.create(user=User.objects.create(email='testuser@example.com', password='testpassword'), date='2024-04-19 12:00:00', status=True, code=Code.objects.create(code=12345, time='12:00')), product=Product.objects.create(name='Test Product', price=100, count=10, disc='Test Description', category=Category.objects.create(name='Test Category')), quantity=2)
 
     def test_order_item_order_label(self):
-        order_item = Order_Item.objects.get(id=1)
+        order_item = OrderItem.objects.get(id=1)
         field_label = order_item._meta.get_field('order').verbose_name
         self.assertEqual(field_label, 'order')
 
     def test_order_item_product_label(self):
-        order_item = Order_Item.objects.get(id=1)
+        order_item = OrderItem.objects.get(id=1)
         field_label = order_item._meta.get_field('product').verbose_name
         self.assertEqual(field_label, 'product')
 
     def test_order_item_quantity_label(self):
-        order_item = Order_Item.objects.get(id=1)
+        order_item = OrderItem.objects.get(id=1)
         field_label = order_item._meta.get_field('quantity').verbose_name
         self.assertEqual(field_label, 'quantity')
 
     def test_order_item_string_representation(self):
-        order_item = Order_Item.objects.get(id=1)
+        order_item = OrderItem.objects.get(id=1)
         self.assertEqual(str(order_item), order_item.product.name)
 
 class CodeModelTest(TestCase):
