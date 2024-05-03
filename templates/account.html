@@ -1,0 +1,289 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'navbar.html' %}
+
+    <div class="py-9 bg-gray-light">
+        <div class="container">
+            <div class="grid grid-cols-12 gap-x-4">
+                <div class="col-span-12">
+                    <nav>
+                        <ul class="flex flex-wrap items-center justify-center">
+                            <li class="mr-5"><a href="index.html" class="text-dark font-medium text-base uppercase transition-all hover:text-orange relative before:w-5 before:h-1px before:empty before:absolute before:top-3 before:bg-dark before:transform before:rotate-115 before:-right-5">Home</a></li>
+                            <li class="text-dark font-medium text-base uppercase mr-5">account Page</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="pb-24 mt-16">
+        <div class="container">
+
+            <div id="shoptab" class="grid grid-cols-12 gap-y-5 lg:gap-y-0 gap-x-5">
+                <div class="col-span-12 lg:col-span-4">
+                    <ul class="shop-tab-nav account-nav flex flex-wrap flex-col">
+                        <li><a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-600 block" href="#dashboad">dashboad</a></li>
+                        <li><a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-600 block" href="#orders">orders</a></li>
+                        <li><a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-600 block" href="#download">download</a></li>
+                        <li><a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-600 block" href="#payment-method">payment method</a></li>
+                        <li><a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-600 block" href="#address">address</a></li>
+                        <li class="active"><a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-600 block" href="#account"> Account Details</a></li>
+                        <li><a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-b border-gray-600 block" href="{% url 'logout' %}">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div>
+                        <div id="dashboad" class="shop-tab-content">
+                            <div class="p-8 border border-gray-600">
+                                <h3 class="font-semibold text-md lg:text-lg capitalize pb-5 mb-5 border-b border-gray-600 leading-none">Dashboard</h3>
+                                <p>
+                                    Hello, <strong>Alex Tuntuni</strong> (If Not
+                                    <strong>Tuntuni ! </strong><a href="login-register.html" class="transition-all hover:text-orange">Logout</a>)
+                                </p>
+                                <p>
+                                    From your account dashboard. you can easily check &amp; view
+                                    your recent orders, manage your shipping and billing addresses
+                                    and edit your password and account details.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div id="orders" class="shop-tab-content">
+                            <div class="p-8 border border-gray-600">
+                                <h3 class="font-semibold text-md lg:text-lg capitalize pb-5 mb-5 border-b border-gray-600 leading-none">Orders</h3>
+
+                                <div class="overflow-x-auto">
+                                    <table class="w-full min-w-max">
+                                        <thead>
+                                            <tr>
+                                                <th class="bg-gray-light text-center border border-solid border-gray-600 p-3 font-semibold text-base">No</th>
+                                                <th class="bg-gray-light text-center border border-solid border-gray-600 p-3 font-semibold text-base">Name</th>
+                                                <th class="bg-gray-light text-center border border-solid border-gray-600 p-3 font-semibold text-base">Date</th>
+                                                <th class="bg-gray-light text-center border border-solid border-gray-600 p-3 font-semibold text-base">Status</th>
+                                                <th class="bg-gray-light text-center border border-solid border-gray-600 p-3 font-semibold text-base">Total</th>
+                                                <th class="bg-gray-light text-center border border-solid border-gray-600 p-3 font-semibold text-base">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">1</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Mostarizing Oil</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Aug 22, 2018</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Pending</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">$45</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">
+                                                    <a href="shopping-cart.html" class="ht-btn black-btn">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">2</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Katopeno Altuni</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">July 22, 2018</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Approved</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">$100</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">
+                                                    <a href="shopping-cart.html" class="ht-btn black-btn">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">3</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Murikhete Paris</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">June 12, 2017</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">On Hold</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">$99</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">
+                                                    <a href="shopping-cart.html" class="ht-btn black-btn">View</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="download" class="shop-tab-content">
+
+                            <div class="p-8 border border-gray-600">
+                                <h3 class="font-semibold text-md lg:text-lg capitalize pb-5 mb-5 border-b border-gray-600 leading-none">Downloads</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full min-w-max">
+                                        <thead>
+                                            <tr>
+                                                <th class="bg-gray-light text-center border border-solid border-gray-600 p-3 font-semibold text-base">Product</th>
+                                                <th class="bg-gray-light text-center border border-solid border-gray-600 p-3 font-semibold text-base">Date</th>
+                                                <th class="bg-gray-light text-center border border-solid border-gray-600 p-3 font-semibold text-base">Expire</th>
+                                                <th class="bg-gray-light text-center border border-solid border-gray-600 p-3 font-semibold text-base">Download</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Mostarizing Oil</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Aug 22, 2018</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Yes</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">
+                                                    <a href="#" class="ht-btn black-btn">Download File</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Katopeno Altuni</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Sep 12, 2018</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">Never</td>
+                                                <td class="text-center border border-solid border-gray-600 py-5 px-3 align-middle">
+                                                    <a href="#" class="ht-btn black-btn">Download File</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="payment-method" class="shop-tab-content">
+                            <div class="p-8 border border-gray-600">
+                                <h3 class="font-semibold text-md lg:text-lg capitalize pb-5 mb-5 border-b border-gray-600 leading-none">Payment Method</h3>
+                                <p class="font-medium p-4">You Can't Saved Your Payment Method yet. </p>
+                            </div>
+                        </div>
+                        <div id="address" class="shop-tab-content">
+
+                            <div class="p-8 border border-gray-600">
+                                <h3 class="font-semibold text-md lg:text-lg capitalize pb-5 mb-5 border-b border-gray-600 leading-none">Billing Address</h3>
+
+                                <address class="not-italic">
+                                    <p><strong>Alex Tuntuni</strong></p>
+                                    <p>
+                                        1355 Market St, Suite 900 <br>
+                          San Francisco, CA 94103
+                                    </p>
+                                    <p>Mobile: (123) 456-7890</p>
+                                </address>
+
+                                <a href="#" class="transition-all hover:text-orange">Edit Address</a>
+                            </div>
+                        </div>
+                        <div id="account" class="shop-tab-content active">
+                            <div class="p-8 border border-gray-600">
+                                <h3 class="font-semibold text-md lg:text-lg capitalize pb-5 mb-5 border-b border-gray-600 leading-none">Account Details</h3>
+                                <form action="#">
+                                    <div class="grid grid-cols-12 gap-x-5">
+                                        <div class="col-span-12 lg:col-span-6 mb-5">
+                                            <input class="border border-solid border-gray-300 w-full py-1 px-5 mb-5 placeholder-current text-dark h-12 focus:outline-none text-base" id="first-name" placeholder="First Name" type="text">
+                                        </div>
+
+                                        <div class="col-span-12 lg:col-span-6 mb-5">
+                                            <input class="border border-solid border-gray-300 w-full py-1 px-5 mb-5 placeholder-current text-dark h-12 focus:outline-none text-base" id="last-name" placeholder="Last Name" type="text">
+                                        </div>
+
+                                        <div class="col-span-12 mb-5">
+                                            <input class="border border-solid border-gray-300 w-full py-1 px-5 mb-5 placeholder-current text-dark h-12 focus:outline-none text-base" id="display-name" placeholder="Display Name" type="text">
+                                        </div>
+
+                                        <div class="col-span-12 mb-5">
+                                            <input class="border border-solid border-gray-300 w-full py-1 px-5 mb-5 placeholder-current text-dark h-12 focus:outline-none text-base" id="email" placeholder="Email Address" type="email">
+                                        </div>
+
+                                        <div class="col-span-12 mb-5">
+                                            <h4 class="font-semibold text-base capitalize">Password change</h4>
+                                        </div>
+
+                                        <div class="col-span-12 mb-5">
+                                            <input class="border border-solid border-gray-300 w-full py-1 px-5 mb-5 placeholder-current text-dark h-12 focus:outline-none text-base" id="current-pwd" placeholder="Current Password" type="password">
+                                        </div>
+
+                                        <div class="col-span-12 lg:col-span-6 mb-5">
+                                            <input class="border border-solid border-gray-300 w-full py-1 px-5 mb-5 placeholder-current text-dark h-12 focus:outline-none text-base" id="new-pwd" placeholder="New Password" type="password">
+                                        </div>
+
+                                        <div class="col-span-12 lg:col-span-6 mb-5">
+                                            <input class="border border-solid border-gray-300 w-full py-1 px-5 mb-5 placeholder-current text-dark h-12 focus:outline-none text-base" id="confirm-pwd" placeholder="Confirm Password" type="password">
+                                        </div>
+
+                                        <div class="col-span-12">
+                                            <button class="inline-block leading-none uppercase text-white text-sm bg-dark px-5 py-5 transition-all hover:bg-orange" aria-label="Save Changes">Save Changes</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a id="scrollUp" class="w-12 h-12 rounded-full bg-orange text-white fixed right-5 bottom-16 flex flex-wrap items-center justify-center transition-all duration-300 z-10" href="#" aria-label="scroll up"><i class="icon-arrow-up"></i></a>
+
+    <div class="modal-overlay hidden fixed inset-0 bg-black opacity-50 z-10"></div>
+
+    <div id="modal-cart" class="modal fixed opacity-0 transition-opacity duration-300 ease-linear md:w-11/12 md:max-w-1000 hidden z-40 left-8 right-8 md:left-1/2 top-1/2 transform -translate-y-1/2 md:-translate-x-1/2 p-7 bg-white">
+
+
+
+        <div class="grid md:grid-cols-2 gap-4">
+            <div class="w-full">
+                <img class="w-full h-full" src="{% static 'assets/images/products/lg/product1.webp' %}" alt="product image" loading="lazy" width="432" height="480">
+            </div>
+            <div>
+                <button class="text-black text-lg absolute top-7 right-7 modal-close"><i class="icon-close"></i></button>
+
+                <h3 class="text-dark font-medium text-md lg:text-lg leading-none mb-4">Airpod product kiebd</h3>
+                <h5 class="font-bold text-md leading-none text-orange mb-8">
+                    $130.00
+                    <del class="font-normal text-base mr-1 inline-block">$110.00</del>
+                </h5>
+
+                <p class="mb-5 text-sm">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,</p>
+
+                <select class="w-full h-12 border border-solid border-gray-300  px-5 py-2 appearance-none" style="background: rgba(0,0,0,0) url('assets/images/icon/qcv-arrow-down.webp') no-repeat scroll right 20px center;">
+                    <option value="red">red</option>
+                    <option value="green">green</option>
+                    <option value="blue">blue</option>
+                </select>
+
+                <div class="flex flex-wrap items-center mt-8">
+                    <div class="flex count border border-solid border-gray-300 p-2 h-11">
+                        <button class="decrement flex-auto w-5 leading-none" aria-label="button">-</button>
+                        <input type="number" min="1" max="100" step="1" value="1" class="quantity__input flex-auto w-8 text-center focus:outline-none input-appearance-none">
+                        <button class="increment flex-auto w-5 leading-none" aria-label="button">+</button>
+                    </div>
+                    <div class="ml-2 sm:ml-8">
+                        <button class="bg-black leading-none py-4 px-5 md:px-8 font-normal text-sm h-11 text-white transition-all hover:bg-orange">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal-overlay hidden fixed inset-0 bg-black opacity-50 z-30"></div>
+
+    <div id="modal-addto-cart" class="modal fixed opacity-0 transition-opacity duration-300 ease-linear md:w-11/12 md:max-w-1000 hidden z-50 left-8 right-8 md:left-1/2 top-1/2 transform -translate-y-1/2 md:-translate-x-1/2 p-7 bg-white mx-auto">
+
+
+        <div class="md:flex md:flex-wrap">
+            <div class="md:mr-5 md:flex-30 mb-5 md:mb-0">
+                <img class="w-full" src="{% static 'assets/images/products/lg/product1.webp' %}" alt="product image" loading="lazy" width="432" height="480">
+            </div>
+            <div class="md:flex-auto">
+                <button class="text-black text-lg absolute top-7 right-7 modal-close"><i class="icon-close"></i></button>
+                <h3 class="text-dark font-medium text-md sm:text-lg mb-4">Airpod product kiebd</h3>
+                <p class="text-dark text-sm flex flex-wrap items-center"><i class="icon-check text-lg mr-5"></i> Added to cart successfully!</p>
+                <div class="mt-8">
+                    <a href="#" class="bg-black leading-none py-2 px-5 font-normal text-sm text-white transition-all hover:bg-orange mr-5">View Cart</a>
+                    <a href="#" class="bg-black leading-none py-2 px-5 font-normal text-sm text-white transition-all hover:bg-orange">Checkout</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {% include 'footer.html' %}
+{% endblock %}
